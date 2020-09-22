@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">AttendanceTracker</string>
+    <string-array name="departments">
+        <item>CSE</item>
+        <item>IT</item>
+        <item>MAE</item>
+        <item>ECE</item>
+        <item>B. Arch</item>
+        <item>M. Tech</item>
+        <item>MCA</item>
+        <item>BBA</item>
+    </string-array>
 </resources>
