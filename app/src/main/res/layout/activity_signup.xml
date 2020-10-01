@@ -4,35 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5ad2f4"
+    android:background="@drawable/gradient"
     tools:context=".Login">
 
-    <View
-        android:id="@+id/topView"
+    <Button
+        android:id="@+id/signupButton"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:background="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:background="@drawable/wave"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topView" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/round"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="16sp"
+        android:text="SIGN UP"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logowhite" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/emailID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/shape"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Email ID"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:text="Email ID"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teacherName" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/shape"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:text="Password"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/department" />
 
     <EditText
         android:id="@+id/teacherName"
@@ -55,27 +86,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3" />
 
-    <EditText
-        android:id="@+id/emailID"
-        android:background="@drawable/shape"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:drawableStart="@drawable/ic_baseline_email_24"
-        android:drawablePadding="16dp"
-        android:ems="10"
-        android:hint="Email ID"
-        android:inputType="textPersonName"
-        android:padding="16dp"
-        android:text="Email ID"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teacherName" />
-
     <Spinner
         android:id="@+id/department"
         android:layout_width="0dp"
@@ -90,41 +100,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailID" />
 
-    <EditText
-        android:id="@+id/password"
+    <View
+        android:id="@+id/view3"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/shape"
-        android:drawableStart="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="16dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="16dp"
-        android:text="Password"
-        android:textSize="20sp"
+        android:layout_height="100dp"
+        android:background="@drawable/wave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/department" />
+        app:layout_constraintTop_toBottomOf="@+id/topView" />
 
-    <Button
-        android:id="@+id/signupButton"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:padding="16sp"
+    <View
+        android:id="@+id/topView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/round"
-        android:text="SIGN UP"
+        android:layout_height="150dp"
+        android:background="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logowhite" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
