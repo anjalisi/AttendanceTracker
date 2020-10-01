@@ -113,7 +113,7 @@
         android:id="@+id/topView"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        android:background="#444444"
+        android:background="#202020"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
