@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#5ad2f4">
+    android:background="#5DA2D5"
+    android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="405dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            android:background="#000000"
+            android:background="#17252A"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/hacker"
-                android:layout_marginTop="40dp"/>
+                android:layout_marginTop="40dp"
+                android:src="@drawable/hacker" />
 
             <TextView
                 android:id="@+id/nameOfTeacher"
@@ -33,24 +34,25 @@
                 android:textColor="#fff"
                 android:textSize="27sp" />
         </LinearLayout>
+
         <androidx.cardview.widget.CardView
             android:layout_width="370dp"
             android:layout_height="120dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="290dp"
-            >
+            android:layout_marginTop="290dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:weightSum="3"
-                >
+                android:weightSum="3">
+
                 <LinearLayout
-                    android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/numOfClass"
@@ -74,12 +76,13 @@
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/hoursDone"
@@ -103,12 +106,13 @@
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/hoursLeft"
@@ -135,21 +139,24 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
+
     <LinearLayout
         android:layout_width="360dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginTop="45dp">
+        android:layout_marginTop="45dp"
+        android:orientation="vertical">
+
         <LinearLayout
-            android:background="#fff"
-            android:paddingLeft="25dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingLeft="25dp">
+
             <ImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/ic_baseline_contact_phone_24"/>
+                android:src="@drawable/ic_baseline_contact_phone_24" />
 
             <TextView
                 android:id="@+id/telephone"
@@ -163,12 +170,13 @@
                 android:textSize="17sp"
                 android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
 
-            android:background="#fff"
-            android:paddingLeft="25dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingLeft="25dp">
 
             <ImageView
                 android:id="@+id/mail"
@@ -189,41 +197,45 @@
                 android:textSize="17sp"
                 android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
 
-            android:background="#fff"
-        android:paddingLeft="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/chart"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/ic_baseline_bar_chart_24"/>
-
-        <TextView
-            android:id="@+id/attendanceChart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:fontFamily="serif-monospace"
-            android:paddingLeft="20dp"
-            android:text="62%"
-            android:textColor="#000000"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-        <LinearLayout
-
-            android:background="#fff"
-            android:paddingLeft="25dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingLeft="25dp">
+
+            <ImageView
+                android:id="@+id/chart"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_baseline_bar_chart_24" />
+
+            <TextView
+                android:id="@+id/attendanceChart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="serif-monospace"
+                android:paddingLeft="20dp"
+                android:text="62%"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingLeft="25dp">
+
             <ImageView
                 android:id="@+id/dept"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/ic_baseline_assignment_ind_24"/>
+                android:src="@drawable/ic_baseline_assignment_ind_24" />
 
             <TextView
                 android:id="@+id/department"
@@ -238,4 +250,5 @@
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>
