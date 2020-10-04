@@ -16,7 +16,7 @@
         android:layout_marginEnd="40dp"
         android:background="@drawable/round"
         android:fontFamily="sans-serif-condensed-medium"
-        android:padding="16sp"
+        android:padding="10sp"
         android:text="SIGN UP"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
@@ -37,10 +37,9 @@
         android:ems="10"
         android:hint="Email ID"
         android:inputType="textPersonName"
-        android:padding="16dp"
-        android:text="Email ID"
+        android:padding="8dp"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/teacherName" />
@@ -58,9 +57,8 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:padding="16dp"
-        android:text="Password"
-        android:textSize="20sp"
+        android:padding="8dp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/department" />
@@ -78,10 +76,9 @@
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        android:padding="16dp"
-        android:text="Name"
+        android:padding="8dp"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3" />
@@ -89,13 +86,13 @@
     <Spinner
         android:id="@+id/department"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/shape"
-        android:padding="16dp"
-        android:scrollbarSize="6dp"
+        android:padding="8dp"
+        android:scrollbarSize="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailID" />
@@ -118,6 +115,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topView" />
 
+    <TextView
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="serif"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        android:text="Already have an account? Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupButton" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -127,4 +140,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logowhite" />
 
+    <ProgressBar
+        android:id="@+id/progBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

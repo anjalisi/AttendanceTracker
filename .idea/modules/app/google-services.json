@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "26654912732",
+    "firebase_url": "https://attendancetracker-30f24.firebaseio.com",
+    "project_id": "attendancetracker-30f24",
+    "storage_bucket": "attendancetracker-30f24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26654912732:android:c10c33dd3b0451e4008419",
+        "android_client_info": {
+          "package_name": "com.example.attendancetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26654912732-gcp5586jrrhf688b7l8n2n3oep96dhu4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.attendancetracker",
+            "certificate_hash": "69fd7d1c6316c8a356db5845956db951fcbd913e"
+          }
+        },
+        {
+          "client_id": "26654912732-b7gghp14sffmj2m0eq64v2o3r9ih70rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAezUKiCb8J8R-5eaX6BIWkGyWQYJnieFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26654912732-b7gghp14sffmj2m0eq64v2o3r9ih70rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
