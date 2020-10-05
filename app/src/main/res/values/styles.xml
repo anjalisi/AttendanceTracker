@@ -2,9 +2,13 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">#0BA6ED</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="navigationTheme">
+<!--        Colour of item when selected-->
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorControlHighlight">#2789D1</item>
+    </style>
 </resources>

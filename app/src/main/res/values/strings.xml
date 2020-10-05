@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AttendanceTracker</string>
+    <string name="app_name">Presenza</string>
     <string-array name="departments">
         <item>CSE</item>
         <item>IT</item>

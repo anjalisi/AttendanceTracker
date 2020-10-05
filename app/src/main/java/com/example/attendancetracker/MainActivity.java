@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Animation logoAnim;
     ImageView logo;
     //adding a new screen after splash
-    private static int SPLASH_SCREEN=3000;
+    private static int SPLASH_SCREEN=1500;
     private FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
