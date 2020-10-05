@@ -88,6 +88,7 @@ public class Signup extends AppCompatActivity {
                                 Intent dashboard= new Intent(getApplicationContext(), MainDashboard.class);
                                 dashboard.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(dashboard);
+                                finish();
                             }
                             else{
                                 Toast.makeText(Signup.this, "Registration Unsuccessful! Try Again"+depart, Toast.LENGTH_SHORT).show();
@@ -147,5 +148,6 @@ public class Signup extends AppCompatActivity {
     public void openLogin() {
         Intent login = new Intent(this, Login.class);
         startActivity(login);
+
     }
 }

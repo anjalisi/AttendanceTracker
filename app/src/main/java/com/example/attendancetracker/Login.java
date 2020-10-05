@@ -62,6 +62,7 @@ public class Login extends AppCompatActivity {
                     Intent dashboard= new Intent(getApplicationContext(), MainDashboard.class);
                     dashboard.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(dashboard);
+                    finish();
                 }
                 else{
                     Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();

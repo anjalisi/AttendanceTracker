@@ -36,7 +36,7 @@
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_margin="16dp"
+            android:layout_margin="25dp"
             app:cardElevation="8dp"
             app:cardCornerRadius="10dp"
             >
@@ -44,10 +44,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical"
                 >
                 <ImageView
+                    android:layout_margin="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/immigration"
@@ -70,7 +71,7 @@
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_margin="16dp"
+            android:layout_margin="25dp"
             app:cardElevation="8dp"
             app:cardCornerRadius="10dp"
             >
@@ -78,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical"
                 >
 
@@ -86,8 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:padding="2dp"
-                    android:src="@drawable/schedule"
+                    android:padding="4dp"
                     app:srcCompat="@drawable/calendar" />
 
                 <TextView
@@ -107,7 +107,7 @@
         android:layout_height="0dp"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_margin="16dp"
+        android:layout_margin="25dp"
         app:cardElevation="8dp"
         app:cardCornerRadius="10dp"
         >
@@ -115,7 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_margin="16dp"
+            android:layout_margin="5dp"
             android:orientation="vertical"
             >
 
@@ -123,8 +123,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/immigration"
-                app:srcCompat="@drawable/reading" />
+                android:src="@drawable/reading"
+                android:padding="2dp"/>
 
             <TextView
                 android:id="@+id/listOfStudents"
@@ -143,7 +143,7 @@
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_margin="16dp"
+            android:layout_margin="25dp"
             app:cardElevation="8dp"
             app:cardCornerRadius="10dp"
             >
@@ -151,7 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical"
                 >
 
@@ -159,8 +159,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/immigration"
-                    app:srcCompat="@drawable/checklist" />
+                    android:src="@drawable/checklist"
+                    android:padding="4dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
