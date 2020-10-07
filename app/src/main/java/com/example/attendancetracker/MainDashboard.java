@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,6 +22,7 @@ public class MainDashboard extends AppCompatActivity implements NavigationView.O
     NavigationView navigationView;
     ImageView menuIcon;
     LinearLayout contentView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,17 +30,17 @@ public class MainDashboard extends AppCompatActivity implements NavigationView.O
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         menuIcon = (ImageView) findViewById(R.id.toolbarimg);
-        contentView=(LinearLayout)findViewById(R.id.contents);
+        contentView = (LinearLayout) findViewById(R.id.contents);
 
+        navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_home);
         //Connecting image to menu
         navigationDrawer();
     }
 
     private void navigationDrawer() {
 
-        navigationView.bringToFront();
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_home);
 
         menuIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +84,21 @@ public class MainDashboard extends AppCompatActivity implements NavigationView.O
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Intent i;
+        switch (item.getItemId()) {
+            case R.id.nav_home:
+                i = new Intent(MainDashboard.this, MainDashboard.class);
+                startActivity(i);
+                navigationView.setCheckedItem(R.id.nav_home);
+                break;
+
+            case R.id.my_profile:
+                i = new Intent(MainDashboard.this, Profile.class);
+                startActivity(i);
+                navigationView.setCheckedItem(R.id.my_profile);
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 }

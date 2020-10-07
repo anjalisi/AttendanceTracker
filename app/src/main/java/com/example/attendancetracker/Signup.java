@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Signup extends AppCompatActivity {
@@ -27,17 +28,26 @@ public class Signup extends AppCompatActivity {
     EditText emailId;
     EditText teacherName;
     EditText password;
+    EditText phone;
     Button signupBtn;
+    FirebaseDatabase firebaseDatabase;
     private FirebaseAuth firebaseAuth;
     ProgressBar progressBar;
+    DatabaseReference reference;
     //Registration method
     private void registerUser(){
         //Get the data
+        final String tele=phone.getText().toString().trim();
         final String teacher= teacherName.getText().toString().trim();
         final String email= emailId.getText().toString().trim();
         String pass= password.getText().toString().trim();
         final String depart = dept.getSelectedItem().toString().trim();
 
+        if(tele.length()!=10){
+            password.setError("Incorrect phone number");
+            password.requestFocus();
+            return;
+        }
         if(teacher.isEmpty())
         {
             teacherName.setError("Name is required");
@@ -77,7 +87,7 @@ public class Signup extends AppCompatActivity {
                 progressBar.setVisibility(View.GONE);
                 if(task.isSuccessful()){
                     //we can now store additional fields
-                    TeacherUser user= new TeacherUser(teacher, email, depart);
+                    TeacherUser user= new TeacherUser(teacher, email, depart, tele);
                     FirebaseDatabase.getInstance().getReference("Users")
                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                         .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -91,7 +101,7 @@ public class Signup extends AppCompatActivity {
                                 finish();
                             }
                             else{
-                                Toast.makeText(Signup.this, "Registration Unsuccessful! Try Again"+depart, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Signup.this, "Registration Unsuccessful! Try Again", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -116,6 +126,7 @@ public class Signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         //connecting
+        phone=findViewById(R.id.phone);
         progressBar=(ProgressBar)findViewById(R.id.progBar);
         emailId= (EditText)findViewById(R.id.emailID);
         password=(EditText) findViewById(R.id.password);
@@ -130,6 +141,8 @@ public class Signup extends AppCompatActivity {
 
         //Setting up firebase
         firebaseAuth= FirebaseAuth.getInstance();
+        firebaseDatabase=FirebaseDatabase.getInstance();
+        reference=firebaseDatabase.getReference("Users");
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
