@@ -181,6 +181,12 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
                 i = new Intent(Profile.this, Profile.class);
                 startActivity(i);
                 break;
+
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(getApplicationContext(), Login.class));
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

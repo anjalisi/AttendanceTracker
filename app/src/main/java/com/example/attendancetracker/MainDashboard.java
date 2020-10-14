@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainDashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     static final float END_SCALE = 0.7f;
@@ -97,6 +98,11 @@ public class MainDashboard extends AppCompatActivity implements NavigationView.O
                 startActivity(i);
                 navigationView.setCheckedItem(R.id.my_profile);
                 break;
+
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(MainDashboard.this, Login.class));
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
